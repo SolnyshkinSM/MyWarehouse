@@ -29,7 +29,6 @@ UIAlertController *receiveAlert(NSString *title, NSString *message) {
     
     [alert addAction:defaultAction];
     
-    //return alert;
     return alert;
 
 }
