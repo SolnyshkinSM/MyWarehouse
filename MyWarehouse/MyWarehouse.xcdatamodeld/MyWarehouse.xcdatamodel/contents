@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Catalog" representedClassName="Catalog" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Client" representedClassName="Client" parentEntity="Catalog" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="logo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Coming" representedClassName="Coming" parentEntity="Documents" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="totalSum" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client"/>
+        <relationship name="comingTable" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ComingTable" inverseName="owner" inverseEntity="ComingTable"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company"/>
+        <relationship name="storage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Storage"/>
+    </entity>
+    <entity name="ComingTable" representedClassName="ComingTable" syncable="YES" codeGenerationType="class">
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sum" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coming" inverseName="comingTable" inverseEntity="Coming"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product"/>
+    </entity>
+    <entity name="Company" representedClassName="Company" parentEntity="Catalog" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="logo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Consumption" representedClassName="Consumption" parentEntity="Documents" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="totalSum" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company"/>
+        <relationship name="consumptionTable" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConsumptionTable" inverseName="owner" inverseEntity="ConsumptionTable"/>
+        <relationship name="storage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Storage"/>
+    </entity>
+    <entity name="ConsumptionTable" representedClassName="ConsumptionTable" syncable="YES" codeGenerationType="class">
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sum" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Consumption" inverseName="consumptionTable" inverseEntity="Consumption"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product"/>
+    </entity>
+    <entity name="Documents" representedClassName="Documents" syncable="YES" codeGenerationType="class"/>
+    <entity name="Product" representedClassName="Product" parentEntity="Catalog" syncable="YES" codeGenerationType="class">
+        <attribute name="isProduct" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="isService" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="logo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="units" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Units"/>
+    </entity>
+    <entity name="Storage" representedClassName="Storage" parentEntity="Catalog" syncable="YES" codeGenerationType="class">
+        <attribute name="logo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+    </entity>
+    <entity name="Units" representedClassName="Units" parentEntity="Catalog" syncable="YES" codeGenerationType="class">
+        <attribute name="logo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+    </entity>
+    <elements>
+        <element name="Catalog" positionX="-2023.08203125" positionY="-10522.03125" width="128" height="58"/>
+        <element name="Client" positionX="-2175.8828125" positionY="-10367.6875" width="128" height="88"/>
+        <element name="Coming" positionX="-2463.61328125" positionY="-10197.6484375" width="128" height="148"/>
+        <element name="ComingTable" positionX="-1926.50390625" positionY="-10183.296875" width="128" height="118"/>
+        <element name="Company" positionX="-2352.63671875" positionY="-10372.3203125" width="128" height="88"/>
+        <element name="Consumption" positionX="-2461.15625" positionY="-10022.8671875" width="128" height="148"/>
+        <element name="ConsumptionTable" positionX="-1919.2265625" positionY="-9992.75390625" width="128" height="118"/>
+        <element name="Documents" positionX="-2642.578125" positionY="-10085.9765625" width="128" height="43"/>
+        <element name="Product" positionX="-1828.08984375" positionY="-10366.51171875" width="128" height="118"/>
+        <element name="Storage" positionX="-2000.59765625" positionY="-10365.83203125" width="128" height="58"/>
+        <element name="Units" positionX="-1669.0859375" positionY="-10364.53125" width="128" height="58"/>
+    </elements>
+</model>
