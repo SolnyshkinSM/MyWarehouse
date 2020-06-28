@@ -125,7 +125,7 @@
         return _fetchedResultsController;
     }
     
-    NSFetchRequest *fetchRequest = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     switch (self.typeObjectModel) {
         case TypeObjectModelStorage:
             fetchRequest = Storage.fetchRequest;

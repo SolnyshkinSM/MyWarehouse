@@ -114,7 +114,7 @@
         return _fetchedResultsController;
     }
     
-    NSFetchRequest *fetchRequest = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     switch (self.typeObjectModel) {
         case TypeObjectModelComing:
             fetchRequest = Coming.fetchRequest;
@@ -137,7 +137,7 @@
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                                 managedObjectContext:self.managedObjectContext
                                                                                                   sectionNameKeyPath:@"company.name"
-                                                                                                           cacheName:nil];
+                                                                                                           cacheName:@"Company"];
     
     aFetchedResultsController.delegate = self;
     

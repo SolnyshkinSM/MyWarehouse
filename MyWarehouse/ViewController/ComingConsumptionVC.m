@@ -89,7 +89,7 @@
     
     NSManagedObjectContext *context = self.managedObjectContext;
     
-    id newObject = nil;
+    id newObject = Documents.fetchRequest;
     if (self.currentObject) {
         newObject = self.currentObject;
     } else {
@@ -360,7 +360,7 @@
         return _fetchedResultsController;
     }
     
-    NSFetchRequest *fetchRequest = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     switch (self.typeObjectModel) {
         case TypeObjectModelComing:
             fetchRequest = ComingTable.fetchRequest;
