@@ -124,7 +124,14 @@
         
     }
     
-    decisionHandler(WKNavigationActionPolicyAllow); //Обязательно нужно вызвать метод
+    //NSThread
+    if ([[NSThread currentThread] isMainThread]) {
+        NSThread *thread = [[NSThread alloc] initWithBlock:^{
+            decisionHandler(WKNavigationActionPolicyAllow);
+        }];
+        [thread start];
+    }
+    
 }
 
 @end

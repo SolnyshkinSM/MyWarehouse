@@ -62,17 +62,17 @@
     
     [[ServerManager sharedManager] postText:self.textTextView.text
                                       image:self.currentImage
-                                   onGroupWall:@"15853729"
-                                     onSuccess:^(id result) {
-                
+                                onGroupWall:@"15853729"
+                                  onSuccess:^(id result) {
+
         if (result) {
             [self.navigationController popViewControllerAnimated:YES];
         }
+
+    } onFailure:^(NSError * _Nonnull error, NSInteger statusCode) {
+
+    }];
         
-       } onFailure:^(NSError * _Nonnull error, NSInteger statusCode) {
-           
-       }];
-     
 }
 
 - (IBAction)addAttachAction:(UIButton *)sender {

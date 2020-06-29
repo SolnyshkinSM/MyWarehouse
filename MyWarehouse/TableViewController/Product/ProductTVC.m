@@ -195,7 +195,7 @@
     [self.fetchedResultsController.fetchRequest setPredicate:predicate];
     [self.fetchedResultsController performFetch:nil];
     [self.tableView reloadData];
-    
+      
 }
 
 @end
