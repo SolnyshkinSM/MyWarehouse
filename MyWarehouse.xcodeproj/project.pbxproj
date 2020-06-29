@@ -165,6 +165,7 @@
 		C3489E7D249BBBC5002A5C28 /* Coming_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coming_32.png; sourceTree = "<group>"; };
 		C3489E7E249BBBC5002A5C28 /* Consumption_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Consumption_128.png; sourceTree = "<group>"; };
 		C3489E7F249BBBC5002A5C28 /* Consumption_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Consumption_32.png; sourceTree = "<group>"; };
+		C35EEF4724A9F4BC0094B330 /* UserProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProtocol.h; sourceTree = "<group>"; };
 		C363B2EF24A1E6B4005A93CA /* DiagramProductTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagramProductTVC.h; sourceTree = "<group>"; };
 		C363B2F024A1E6B4005A93CA /* DiagramProductTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiagramProductTVC.m; sourceTree = "<group>"; };
 		C363B2F424A1E6E1005A93CA /* DiagramProductTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagramProductTVCell.h; sourceTree = "<group>"; };
@@ -299,6 +300,7 @@
 		C321108F2494A7F70064A7E3 /* MyWarehouse */ = {
 			isa = PBXGroup;
 			children = (
+				C35EEF4624A9F4810094B330 /* Protocol */,
 				C31D665024A66D8E0032A897 /* Doc */,
 				C32110C82494A81F0064A7E3 /* Utils */,
 				C3B3553024A4CFCD001A454F /* Objects */,
@@ -454,6 +456,14 @@
 				C343628E249E406600775122 /* HomeTVC.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C35EEF4624A9F4810094B330 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C35EEF4724A9F4BC0094B330 /* UserProtocol.h */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		C363B2EE24A1E667005A93CA /* DiagramProduct */ = {
