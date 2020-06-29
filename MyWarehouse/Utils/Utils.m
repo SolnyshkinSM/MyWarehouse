@@ -8,6 +8,8 @@
 
 #import "Utils.h"
 
+#import "UIColor+ColorCategory.h"
+
 #import <UIKit/UIAlertController.h>
 #import <UIKit/UITableViewController.h>
 #import <UIKit/UIStoryboard.h>
@@ -84,11 +86,5 @@ UITabBarController * receiveCurrentTabBarController(void) {
 }
 
 UIColor * receiveRandomColor(void) {
-    
-    CGFloat red = (float)(arc4random() % 256) / 255;
-    CGFloat green = (float)(arc4random() % 256) / 255;
-    CGFloat blue = (float)(arc4random() % 256) / 255;
-                          
-    return [UIColor colorWithRed:red green:green blue:blue alpha:1.f];
-    
+    return [UIColor receiveRandomColor];
 }

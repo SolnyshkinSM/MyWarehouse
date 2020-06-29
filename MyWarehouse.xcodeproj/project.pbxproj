@@ -45,6 +45,7 @@
 		C3489E81249BBBC5002A5C28 /* Coming_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C3489E7D249BBBC5002A5C28 /* Coming_32.png */; };
 		C3489E82249BBBC5002A5C28 /* Consumption_128.png in Resources */ = {isa = PBXBuildFile; fileRef = C3489E7E249BBBC5002A5C28 /* Consumption_128.png */; };
 		C3489E83249BBBC5002A5C28 /* Consumption_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C3489E7F249BBBC5002A5C28 /* Consumption_32.png */; };
+		C35EEF4A24A9FB790094B330 /* UIColor+ColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C35EEF4924A9FB790094B330 /* UIColor+ColorCategory.m */; };
 		C363B2F124A1E6B4005A93CA /* DiagramProductTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C363B2F024A1E6B4005A93CA /* DiagramProductTVC.m */; };
 		C363B2F624A1E6E1005A93CA /* DiagramProductTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C363B2F524A1E6E1005A93CA /* DiagramProductTVCell.m */; };
 		C363B30224A24F89005A93CA /* Play_128.png in Resources */ = {isa = PBXBuildFile; fileRef = C363B2FD24A24F88005A93CA /* Play_128.png */; };
@@ -166,6 +167,8 @@
 		C3489E7E249BBBC5002A5C28 /* Consumption_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Consumption_128.png; sourceTree = "<group>"; };
 		C3489E7F249BBBC5002A5C28 /* Consumption_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Consumption_32.png; sourceTree = "<group>"; };
 		C35EEF4724A9F4BC0094B330 /* UserProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProtocol.h; sourceTree = "<group>"; };
+		C35EEF4824A9FB790094B330 /* UIColor+ColorCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorCategory.h"; sourceTree = "<group>"; };
+		C35EEF4924A9FB790094B330 /* UIColor+ColorCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorCategory.m"; sourceTree = "<group>"; };
 		C363B2EF24A1E6B4005A93CA /* DiagramProductTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagramProductTVC.h; sourceTree = "<group>"; };
 		C363B2F024A1E6B4005A93CA /* DiagramProductTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiagramProductTVC.m; sourceTree = "<group>"; };
 		C363B2F424A1E6E1005A93CA /* DiagramProductTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagramProductTVCell.h; sourceTree = "<group>"; };
@@ -301,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				C35EEF4624A9F4810094B330 /* Protocol */,
+				C35EEF4B24A9FB830094B330 /* Category */,
 				C31D665024A66D8E0032A897 /* Doc */,
 				C32110C82494A81F0064A7E3 /* Utils */,
 				C3B3553024A4CFCD001A454F /* Objects */,
@@ -464,6 +468,15 @@
 				C35EEF4724A9F4BC0094B330 /* UserProtocol.h */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C35EEF4B24A9FB830094B330 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C35EEF4824A9FB790094B330 /* UIColor+ColorCategory.h */,
+				C35EEF4924A9FB790094B330 /* UIColor+ColorCategory.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		C363B2EE24A1E667005A93CA /* DiagramProduct */ = {
@@ -783,6 +796,7 @@
 				C3B3556124A4D1B6001A454F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				C3B3556624A4D1B6001A454F /* AFAutoPurgingImageCache.m in Sources */,
 				C363B2F624A1E6E1005A93CA /* DiagramProductTVCell.m in Sources */,
+				C35EEF4A24A9FB790094B330 /* UIColor+ColorCategory.m in Sources */,
 				C3B3555F24A4D1B6001A454F /* UIProgressView+AFNetworking.m in Sources */,
 				C34078D624991F4200AA5C34 /* ProductAddTVC.m in Sources */,
 				C32110F12494D7280064A7E3 /* CompanyClientTVC.m in Sources */,
