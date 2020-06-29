@@ -12,6 +12,9 @@
 
 #import "Utils.h"
 
+extern NSString* _Nullable const ComingConsumptionVCAddNewObjectDidChangeNotification;
+extern NSString* _Nullable const ComingConsumptionVCAddNewObjectUserInfoKey;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ComingConsumptionVC : UIViewController <NSFetchedResultsControllerDelegate>

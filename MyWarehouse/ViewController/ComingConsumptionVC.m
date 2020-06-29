@@ -13,6 +13,9 @@
 #import "ProductTVC.h"
 #import "ComingConsumptionVCCell.h"
 
+NSString* const ComingConsumptionVCAddNewObjectDidChangeNotification = @"ComingConsumptionVCAddNewObjectDidChangeNotification";
+NSString* const ComingConsumptionVCAddNewObjectUserInfoKey = @"ComingConsumptionVCAddNewObjectUserInfoKey";
+
 @interface ComingConsumptionVC () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) Company *selectedCompany;
@@ -119,6 +122,14 @@
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
+    
+    
+    //NSNotificationCenter
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:@YES forKey:ComingConsumptionVCAddNewObjectUserInfoKey];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:ComingConsumptionVCAddNewObjectDidChangeNotification
+                                                        object:nil
+                                                      userInfo:dictionary];
     
 }
 

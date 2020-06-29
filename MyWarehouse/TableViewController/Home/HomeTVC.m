@@ -10,6 +10,7 @@
 
 #import "DiagramVC.h"
 #import "DiagramProductTVC.h"
+#import "ComingConsumptionVC.h"
 
 #import "Utils.h"
 
@@ -35,6 +36,16 @@
     
     [self configureCell];
     
+    //NSNotificationCenter
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(AddNewObjectDidChangeNotification:)
+                                                 name:ComingConsumptionVCAddNewObjectDidChangeNotification
+                                               object:nil];
+    
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Configure
@@ -149,6 +160,15 @@
     
 }
 
+- (void)AddNewObjectDidChangeNotification:(NSNotification *)notification {
+    
+    NSNumber *value = [notification.userInfo objectForKey:ComingConsumptionVCAddNewObjectUserInfoKey];
+    
+    if ([value boolValue]) {
+        [self refreshTable];
+    }
+    
+}
 
 #pragma mark - UITableViewDelegate
 
@@ -234,7 +254,10 @@
         UIViewController *viewController = [[UIViewController alloc] init];
         viewController.navigationItem.title = @"Инструкция";
         viewController.view = view;
-        [self.navigationController showViewController:viewController sender:nil];
+                
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController showViewController:viewController sender:nil];
+        });
         
     }
     
