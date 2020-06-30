@@ -7,5 +7,8 @@ MyWarehouse
  
 ![alt text](Image.png "Главный экран")
 
+![alt text](xcDataModel.png "Модель")
+
+
 https://youtu.be/rxzzYZ8SFj0
 
