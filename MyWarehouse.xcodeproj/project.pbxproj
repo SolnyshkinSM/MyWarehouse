@@ -55,6 +55,7 @@
 		C363B30624A24F89005A93CA /* Instagram_128.png in Resources */ = {isa = PBXBuildFile; fileRef = C363B30124A24F89005A93CA /* Instagram_128.png */; };
 		C363B30824A24F91005A93CA /* Facebook_128.png in Resources */ = {isa = PBXBuildFile; fileRef = C363B30724A24F91005A93CA /* Facebook_128.png */; };
 		C363B30B24A2536F005A93CA /* PostVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C363B30A24A2536F005A93CA /* PostVC.m */; };
+		C391988624AB294700CB38E3 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391988424AB294700CB38E3 /* Info.storyboard */; };
 		C39CD6B3249A6D2B0060A2A6 /* ComingConsumptionTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39CD6B2249A6D2B0060A2A6 /* ComingConsumptionTVCell.m */; };
 		C39CD6B6249A71C20060A2A6 /* ComingConsumptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C39CD6B5249A71C20060A2A6 /* ComingConsumptionVC.m */; };
 		C3A011A9249DFC3A00A28E97 /* ComingConsumptionVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A011A8249DFC3A00A28E97 /* ComingConsumptionVCCell.m */; };
@@ -181,6 +182,7 @@
 		C363B30724A24F91005A93CA /* Facebook_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook_128.png; sourceTree = "<group>"; };
 		C363B30924A2536F005A93CA /* PostVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostVC.h; sourceTree = "<group>"; };
 		C363B30A24A2536F005A93CA /* PostVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostVC.m; sourceTree = "<group>"; };
+		C391988524AB294700CB38E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MyWarehouse/Base.lproj/Info.storyboard; sourceTree = "<group>"; };
 		C39CD6B1249A6D2B0060A2A6 /* ComingConsumptionTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComingConsumptionTVCell.h; sourceTree = "<group>"; };
 		C39CD6B2249A6D2B0060A2A6 /* ComingConsumptionTVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComingConsumptionTVCell.m; sourceTree = "<group>"; };
 		C39CD6B4249A71C20060A2A6 /* ComingConsumptionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComingConsumptionVC.h; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		C321108F2494A7F70064A7E3 /* MyWarehouse */ = {
 			isa = PBXGroup;
 			children = (
+				C391988724AB295100CB38E3 /* Storyboard */,
 				C35EEF4624A9F4810094B330 /* Protocol */,
 				C35EEF4B24A9FB830094B330 /* Category */,
 				C31D665024A66D8E0032A897 /* Doc */,
@@ -514,6 +517,14 @@
 				C363B2F524A1E6E1005A93CA /* DiagramProductTVCell.m */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		C391988724AB295100CB38E3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C391988424AB294700CB38E3 /* Info.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		C3B1C6732497C93300259DC6 /* StorageUnits */ = {
@@ -733,6 +744,7 @@
 				C3CAF339249F818300B50CE6 /* Decrease.png in Resources */,
 				C32110E32494B7450064A7E3 /* Catalog_32.png in Resources */,
 				C32110D92494B37C0064A7E3 /* Client_32.png in Resources */,
+				C391988624AB294700CB38E3 /* Info.storyboard in Resources */,
 				C3CAF337249F817B00B50CE6 /* Increase.png in Resources */,
 				C3B3557724A4F66A001A454F /* Attach_128.png in Resources */,
 				C32E54DD2495420F006F9D91 /* Touch_128.png in Resources */,
@@ -868,6 +880,14 @@
 				C32110A22494A7F80064A7E3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C391988424AB294700CB38E3 /* Info.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C391988524AB294700CB38E3 /* Base */,
+			);
+			name = Info.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

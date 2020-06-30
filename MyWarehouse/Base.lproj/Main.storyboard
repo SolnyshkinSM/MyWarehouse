@@ -1274,13 +1274,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61r-5a-CVp">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s3-sS-9Lg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <state key="normal" title="info"/>
+                                                    <connections>
+                                                        <segue destination="hIF-Ve-Lji" kind="show" id="uo1-YU-Otj"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="x91-ar-Ow1">
+                                        <rect key="frame" x="0.0" y="429.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x91-ar-Ow1" id="nyw-1m-cpW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hB-Vj-BNY">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <state key="normal" title="OK"/>
                                                     <connections>
-                                                        <action selector="okAction:" destination="ymw-qy-FZh" eventType="touchUpInside" id="xRT-yP-WEP"/>
+                                                        <action selector="okAction:" destination="ymw-qy-FZh" eventType="touchUpInside" id="Fnu-fD-nQe"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1304,7 +1323,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMk-r8-M1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7380" y="-217"/>
+            <point key="canvasLocation" x="7379.7101449275369" y="-217.63392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ipr-d0-bDB">
@@ -1336,6 +1355,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVx-Hh-ZyY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041" y="139"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="uxW-7H-2NM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" id="hIF-Ve-Lji" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uve-8x-O9P"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1t-Xt-EDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8267" y="-218"/>
         </scene>
     </scenes>
     <resources>
