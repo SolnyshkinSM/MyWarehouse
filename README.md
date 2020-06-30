@@ -5,7 +5,9 @@ MyWarehouse
 
 Приложение позволяет организовать учет товаров и денежных средств на малом предприятии.
  
-![alt text](Image.png "Главный экран")
+![alt text](Image.png "Стартовый экран")
+
+![alt text](Main.png "Главный экран")
 
 ![alt text](xcDataModel.png "Модель")
 
