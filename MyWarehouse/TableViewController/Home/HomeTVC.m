@@ -54,21 +54,41 @@
     
     self.managedObjectContext = ((AppDelegate *)UIApplication.sharedApplication.delegate).persistentContainer.viewContext;
     
-    
-    self.comingSumLabel.text = [receiveCurrentNumberFormatter()
-                                stringFromNumber:[self receiveTotalSumForFetch:Coming.fetchRequest]];
-    self.consumptionSumLabel.text = [receiveCurrentNumberFormatter()
-                                     stringFromNumber:[self receiveTotalSumForFetch:Consumption.fetchRequest]];
-     
-    self.comingProductLabel.text = [receiveCurrentNumberFormatter()
-                                stringFromNumber:[self receiveTotalQuantityForFetch:ComingTable.fetchRequest]];
-    self.consumptionProductLabel.text = [receiveCurrentNumberFormatter()
-                                     stringFromNumber:[self receiveTotalQuantityForFetch:ConsumptionTable.fetchRequest]];
-    
-    
     UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
     [refresh addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refresh;
+        
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    NSOperation *configureViewQueue = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                           selector:@selector(configureViewQueue)
+                                                                             object:nil];
+    
+    [queue addOperation:configureViewQueue];
+    
+}
+
+- (void)configureViewQueue {
+     
+    NSString *comingSumLabelText = [receiveCurrentNumberFormatter()
+    stringFromNumber:[self receiveTotalSumForFetch:Coming.fetchRequest]];
+    
+    NSString *consumptionSumLabelText = [receiveCurrentNumberFormatter()
+    stringFromNumber:[self receiveTotalSumForFetch:Consumption.fetchRequest]];
+    
+    NSString *comingProductLabelText = [receiveCurrentNumberFormatter()
+    stringFromNumber:[self receiveTotalQuantityForFetch:ComingTable.fetchRequest]];
+    
+    NSString *consumptionProductLabelText = [receiveCurrentNumberFormatter()
+    stringFromNumber:[self receiveTotalQuantityForFetch:ConsumptionTable.fetchRequest]];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.comingSumLabel.text = comingSumLabelText;
+        self.consumptionSumLabel.text = consumptionSumLabelText;
+        self.comingProductLabel.text = comingProductLabelText;
+        self.consumptionProductLabel.text = consumptionProductLabelText;
+    });
     
 }
 
