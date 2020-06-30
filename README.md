@@ -7,7 +7,7 @@ MyWarehouse
  
 ![alt text](Image.png "Стартовый экран")
 
-![alt text](Main.png "Главный экран")
+![alt text](main.png "Главный экран")
 
 ![alt text](xcDataModel.png "Модель")
 
