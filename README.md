@@ -1,5 +1,4 @@
 # MyWarehouse
-MyWarehouse
 
 The application allows you to organize accounting of goods and funds in a small business.
 
