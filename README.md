@@ -1,7 +1,7 @@
 # MyWarehouse
 MyWarehouse
 
-Мой склад.
+The application allows you to organize accounting of goods and funds in a small business.
 
 Приложение позволяет организовать учет товаров и денежных средств на малом предприятии.
  
